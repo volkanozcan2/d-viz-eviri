@@ -54,7 +54,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, status, toCode }
             
             {result?.sources && result.sources.length > 0 && (
               <div className="mt-2 text-[10px] text-slate-600 max-w-xs truncate">
-                Kaynak: {result.sources[0].title}
+                Kaynak: <a href={result.sources[0].uri} target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 underline decoration-slate-600/50 hover:decoration-gold-500">{result.sources[0].title}</a>
               </div>
             )}
         </div>
